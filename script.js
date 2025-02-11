@@ -7,39 +7,49 @@ const foods = [
     { name: "Bún đậu", image: "./assets/bun-dau.jpg" },
     { name: "Bánh cuốn", image: "./assets/banh-cuon.jpg" },
     { name: "Anh Long", image: "./assets/anhlong.jpg" },
-
-
 ];
+
 function randomFood() {
     const foodImage = document.getElementById("foodImage");
     const foodName = document.getElementById("foodName");
     const resultText = document.getElementById("resultText");
     const searchButton = document.getElementById("searchButton");
+
     foodImage.classList.add("animate");
     resultText.textContent = "";
-    searchButton.style.display = "none"; // Ẩn nút tìm kiếm khi đang random
+    searchButton.style.display = "none"; // Ẩn nút tìm kiếm
+    searchButton.setAttribute("disabled", "true"); // Vô hiệu hóa nút trong lúc random
+
     let count = 0;
     const maxCount = 10;
-    
+
     const interval = setInterval(() => {
         const randomIndex = Math.floor(Math.random() * foods.length);
         foodImage.src = foods[randomIndex].image;
         foodName.textContent = foods[randomIndex].name;
         count++;
+
         if (count >= maxCount) {
             clearInterval(interval);
             foodImage.classList.remove("animate");
             resultText.textContent = `Hôm nay em nên ăn ${foodName.textContent}!`;
-            searchButton.style.display = "block"; // Hiển thị lại nút tìm kiếm khi xong
+
+            if (foodName.textContent === "Anh Long") {
+                resultText.textContent = "Trúng món độc đắc rồi Thư ơi";
+            }
+
+            searchButton.style.display = "block"; // Hiển thị lại nút tìm kiếm
+            searchButton.removeAttribute("disabled"); // Kích hoạt lại nút
         }
     }, 150);
 }
 
 function searchFood() {
     const foodName = document.getElementById("foodName").textContent;
+    const resultText = document.getElementById("resultText");
 
-    // Check if food name is "Anh Long"
     if (foodName === "Anh Long") {
+        resultText.textContent = "Trúng món độc đắc rồi Thư ơi";
         window.open("https://www.instagram.com/absolutely.vlong/", "_blank");
     } else {
         const searchQuery = `Quán ${foodName} gần tôi`;
