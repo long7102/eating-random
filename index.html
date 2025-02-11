@@ -1,0 +1,20 @@
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hôm nay bé ăn gì</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/123.jpg" />
+</head>
+<body>
+    <div class="container">
+        <h1>Hôm nay bé ăn gì?</h1>
+        <img id="foodImage" src="./assets/123.jpg" alt="Món ăn">
+        <h2 id="foodName">Nhấn nút để chọn xem ăn gì hôm nay</h2>
+        <button onclick="randomFood()">Chọn món thôi nào</button>
+        <p id="resultText"></p>
+        <a id="searchButton" style="display:none; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); cursor: pointer;" onclick="searchFood()">Thế ăn ở đâu bây giờ</a>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+html{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background: url('./assets/high-resolution-blue-background-1920-x-1080-9ievy5j853ofx6e1.jpg') no-repeat center center/cover;
+    max-height: 100vh;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    margin: 20px 0px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Đổ bóng cho chữ */
+}
+
+.container {
+    background-image: url('./assets/b92578bffe8b3896078b7562fc5bf871.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    max-width: 450px;
+    width: 100%;
+}
+
+.food-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin: 10px 0;
+    transition: transform 0.5s, box-shadow 0.3s;
+}
+
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+.animate {
+    animation: shake 0.5s infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(5deg);
+    }
+
+    50% {
+        transform: rotate(-5deg);
+    }
+
+    75% {
+        transform: rotate(5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+button {
+    padding: 14px 22px;
+    font-size: 20px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #ff5733, #c70039);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+    box-shadow: 0 4px 10px rgba(255, 87, 51, 0.4);
+}
+
+button:hover {
+    background: linear-gradient(45deg, #c70039, #900c3f);
+    transform: scale(1.05);
+}
+
+#resultText {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #f8f5fb;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
