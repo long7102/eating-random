@@ -9,8 +9,6 @@ const foods = [
     { name: "Anh Long", image: "./assets/anhlong.jpg" },
 
 
-
-
 ];
 function randomFood() {
     const foodImage = document.getElementById("foodImage");
@@ -37,9 +35,14 @@ function randomFood() {
     }, 150);
 }
 
-
 function searchFood() {
     const foodName = document.getElementById("foodName").textContent;
-    const searchQuery = `Quán ${foodName} gần tôi`;
-    window.open(`https://www.google.com/search?q=${encodeURIComponent(searchQuery)}`, "_blank");
+
+    // Check if food name is "Anh Long"
+    if (foodName === "Anh Long") {
+        window.open("https://www.instagram.com/absolutely.vlong/", "_blank");
+    } else {
+        const searchQuery = `Quán ${foodName} gần tôi`;
+        window.open(`https://www.google.com/search?q=${encodeURIComponent(searchQuery)}`, "_blank");
+    }
 }
