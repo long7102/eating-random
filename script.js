@@ -3,7 +3,11 @@ const foods = [
     { name: "Bún chả", image: "./assets/bun-cha.jpg" },
     { name: "Cơm rang", image: "./assets/com-rang.jpg" },
     { name: "Bánh mì", image: "./assets/banh-mi.jpg" },
-    { name: "Hủ tiếu", image: "https://via.placeholder.com/200?text=Hủ+Tiếu" }
+    { name: "Bún cá", image: "./assets/bun-ca.jpg" },
+    { name: "Bún đậu", image: "./assets/bun-dau.jpg" },
+    { name: "Bánh cuốn", image: "./assets/banh-cuon.jpg" }
+
+
 ];
 function randomFood() {
     const foodImage = document.getElementById("foodImage");
