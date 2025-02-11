@@ -5,7 +5,11 @@ const foods = [
     { name: "Bánh mì", image: "./assets/banh-mi.jpg" },
     { name: "Bún cá", image: "./assets/bun-ca.jpg" },
     { name: "Bún đậu", image: "./assets/bun-dau.jpg" },
-    { name: "Bánh cuốn", image: "./assets/banh-cuon.jpg" }
+    { name: "Bánh cuốn", image: "./assets/banh-cuon.jpg" },
+    { name: "Bún đậu", image: "./assets/bun-dau.jpg" },
+    { name: "Anh Long", image: "./assets/anhlong.jpg" },
+
+
 
 
 ];
